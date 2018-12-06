@@ -43,9 +43,9 @@ License URI: http://www.themevault.net/license*/
         padding: 10px;
     }
     .tab-image a.info {
-        left: 39%;
-        top: 24%;
-        font-size: 32px;
+        /*left: 39%;
+        top: 24%;*/
+        font-size: 10px;
     }
     .event-details a {
         font-size: 12px;
@@ -153,6 +153,10 @@ License URI: http://www.themevault.net/license*/
 /* ----------- Phone ----------- */
 
 @media (max-width: 767px){
+    .tab-image {
+        width: 100%;
+        height: 100%;
+    }
     .pl-0{
         padding-left: 15px;
     }
@@ -337,7 +341,7 @@ License URI: http://www.themevault.net/license*/
         top: 0;
     }
     .tab-image a.info {
-        font-size: 20px;
+        font-size: 10px;
     }
     .gallery-block .nav > li > a {
         padding: 6px;

@@ -89,7 +89,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="copyright">
                             <!--Do not remove Backlink from footer of the template. To remove it you can purchase the Backlink-->
-                            © 2017 All right reserved. Designed by <a href="http://www.themevault.net/" target="_blank">ThemeVault.</a>
+                            © 2018 All right reserved. ReDesigned by <a href="https://www.facebook.com/profile.php?id=100006891096845" target="_blank">HoangPham69.</a>
                         </div>
                     </div>
                 </div>

@@ -38,7 +38,7 @@ if(isset($_GET['success'])){
         <section class="contact-block mt-8p mb-90">
             <div class="container">
                 <div class="block-heading">
-                    <h1>Contact</h1>
+                    <h1>LIÊN HỆ</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">

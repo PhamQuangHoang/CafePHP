@@ -25,20 +25,35 @@ $_SESSION['url']=$path;
 
         <link href="css/style.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
+        <!-- <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>  -->
         <script src="js/jquery.min.js" type="text/javascript"></script>
+
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
-         <script type="text/javascript" src="js/instafeed.min.js"></script> 
+         <script type="text/javascript" src="js/instafeed.min.js"></script>
         <script src="js/custom.js" type="text/javascript"></script>
 
+    <script type="text/javascript">
+
+        function off() {
+                $('#showorder').addClass('hidden');
+             // $("#mycart").fadeOut();
+      $('#overlay-body').css("display","none");
+}
+function on(){
+     $('#overlay-body').css("display","block");
+}
+    </script>
     </head>
     <body>
+        <!-- overlay-* -->
+        <div id="overlay-body" onclick="off();"></div>
         <!--header--->
         <header>
             <div class="top-header">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 text-left col-sm-6 col-xs-6 width-100 txt-center">
-                            <div class="social-icons">           
+                            <div class="social-icons">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
@@ -46,7 +61,7 @@ $_SESSION['url']=$path;
                             </div>
                         </div>
                         <div class="col-md-6 text-right col-sm-6 col-xs-6 width-100 txt-center">
-                            <div class="address-location">           
+                            <div class="address-location">
                                 <a href="#"><i class="fa fa-map-marker fa-lg"></i> LÊ DUẪN -ĐÀ NẴNG</a>
                             </div>
                         </div>
@@ -78,12 +93,14 @@ $_SESSION['url']=$path;
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <div class="search">
-                                    <button type="button" class="btn btn-default">Giao Hàng ngay</button>
+                                    <button type="button" class="btn btn-default" onclick="window.location.href='/cafeshop/payment.php'"><i class="fa fa-shopping-cart"></i></button>
                                 </div>
+
                             </div>
 
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="bottom-header">
@@ -93,11 +110,11 @@ $_SESSION['url']=$path;
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>                        
+                                <span class="icon-bar"></span>
                             </button>
                         </div>
                         <div class="collapse navbar-collapse pl-0" id="myNavbar">
-                            <ul class="nav navbar-nav">
+                            <ul class="nav navbar-nav navbar-center">
                                   <li class=
                                 "<?php if($path=="index"){
                                     echo'active';

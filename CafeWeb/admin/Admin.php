@@ -8,6 +8,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="test.css">
+	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 <script type="text/javascript">
 	// dynamictab
@@ -76,7 +77,7 @@
 							<h4 class="glyphicon glyphicon-menu-hamburger"></h4><br/>Menu
 						</a>
 						<a href="#" class="list-group-item text-center">
-							<h4 class="glyphicon glyphicon-indent-left"></h4><br/>Kho nguyên liệu
+							<h4 class="glyphicon glyphicon-indent-left"></h4><br/>kho
 						</a>
 						<a href="#" class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon-usd"></h4><br/>Thống kê thu chi
@@ -87,13 +88,15 @@
 						<a href="#" class="list-group-item text-center">
 							<h4 class="glyphicon glyphicon-th"></h4><br/>Quản lí bàn
 						</a>
-						
+
 					</div>
 				</div>
 				<div class="col-lg-11 col-md-11 col-sm-10 col-xs-10 bhoechie-tab">
 					<!-- flight section -->
 					<div class="bhoechie-tab-content active">
-						<?php include_once 'listmenu.php'; ?>
+						<!-- <?php include_once 'listmenu.php'; ?> -->
+
+
 					</div>
 					<!-- train section -->
 					<div class="bhoechie-tab-content">
@@ -108,14 +111,17 @@
 						<?php include_once 'tkbill.php' ?>
 					</div>
 					<div class="bhoechie-tab-content">
+
 						<?php include_once 'qlban.php' ?>
+
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- jQuery library -->
-	
+
+
 </body>
 </html>
