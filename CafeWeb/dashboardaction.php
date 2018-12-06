@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 include("config.php");
 $con = new Connect('cafepage');
 
@@ -9,7 +9,7 @@ $name = $_POST['prodName'];
 $type = $_POST['prodType'];
 $price = $_POST['prodPrice'];
 $img = $_POST['prodImage'];
-	$sql = "INSERT INTO `listproduct` (`productID`, `productType`, `productName`, `productPrice`, `productImage`) VALUES (NULL, '$name', '$type', '$price', '$img')";
+	$sql = "INSERT INTO `listproduct` (`productID`, `productType`, `productName`, `productPrice`, `productImage`) VALUES (NULL, '$type', '$name', '$price', '$img')";
 	if($con->insert($sql)){
 		echo "Thêm thành công";
 	}
@@ -68,6 +68,25 @@ if(isset($_POST['paysuccess'])){
 	}else {
 		die("that bai");
 	}
+
+}
+
+if(isset($_POST['checkxd'])){
+$sql = "SELECT COUNT(*) as count FROM `transaction` WHERE 1";
+ $row = $con->select($sql);
+ $num_rows = $row[0]['count'];
+   if(!isset($_SESSION["lastcount"])) {
+        $check = $_SESSION['lastcount'] = $num_rows;
+    } else {
+        $check = $_SESSION['lastcount'];
+    }
+   
+     if($num_rows > $check ) { 
+        $check = $_SESSION['lastcount'] = $num_rows;
+        echo "new customer added";
+     } else {
+        echo "No new customer yet";
+     }
 
 }
 

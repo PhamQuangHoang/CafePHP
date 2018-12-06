@@ -29,9 +29,9 @@ $sql = "SELECT * FROM `pagecontent` WHERE 1";
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <img src="images/Home/indexbanner.png" class="img-responsive" style="width: 100%" alt="banner1" height="700">
-                    <div class="carousel-caption">
-                        <h1>Hương vị đậm đà</h1>
-                        <h2>Chất lượng tuyệt hảo</h2>
+                    <div class="carousel-caption" >
+                        <h1 style="font-family: montserrat">Hương vị đậm đà</h1>
+                        <h2 style="font-family: montserrat">Chất lượng tuyệt hảo</h2>
                         <div ><a class="btn" style="color: white; margin-left: 230px; border-color: white; " href="menu.php" >Đặt hàng ngay </a></div>
                     </div>      
                 </div>

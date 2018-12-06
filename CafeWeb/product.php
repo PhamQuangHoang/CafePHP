@@ -483,8 +483,7 @@ $con = new Connect('cafepage');
     <script src="js/jquery.min.js" type="text/javascript"></script>
 
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
-         <script type="text/javascript" src="js/instafeed.min.js"></script>
-        <script src="js/custom.js" type="text/javascript"></script>
+        <!-- <script src="js/custom.js" type="text/javascript"></script> -->
 
 
    

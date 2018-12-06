@@ -28,10 +28,31 @@
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
    <script type="text/javascript">
         setInterval(function(){
-            $('#autoload').load('unaccepted.php');
+            //
+            checkReload()
+        },1999);
 
-        },20000);
+    function checkReload(){
+        $.ajax({
+        type:'post',
+          url:'dashboardaction.php',
+        data:{
+            checkxd:"check"
 
+        },
+        success:function(response) {
+            if(response =="new customer added"){
+                 $('#autoload').load('unaccepted.php');
+                 console.log("Có khách hàng mới");
+             }else {
+                console.log("Data binh thuong");
+             }
+         
+          
+        }
+      });
+
+    }
 function transport(id){
       $.ajax({
         type:'post',
