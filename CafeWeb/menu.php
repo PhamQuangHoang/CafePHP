@@ -6,11 +6,11 @@ $con = new Connect('cafepage');
 
 
  ?>
- 
-<script type="text/javascript" src="js/shopingcart.js"></script>
+    
+
 <h1 align="center" class="mt-20">Giao hàng nhanh chóng </h1>
                     <!-- ShowOrder  -->
-                                    <div class="row"> 
+               <div class="row"> 
                                              <div class="col-md-8 details hidden" id="showorder">
                                             
                                                 <div class="row details-header ">
@@ -64,7 +64,7 @@ $con = new Connect('cafepage');
                                           
 
                                         </div>
-                                    </div>
+                                    </div>                     
                                    
 
         <?php 

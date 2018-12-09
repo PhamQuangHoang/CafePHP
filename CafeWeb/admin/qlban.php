@@ -11,109 +11,25 @@
 <div class="table-responsive" id="mytable"> </div>
 <div id="ordertable">
 	<div class="col-lg-6 col-md-6 col-sm-12-col-xs-12 table-bordered order-table">
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" >
-			<a href="javascript:void(0)" class="text-center"  <?php
-					if(isset($_COOKIE['ban1'])) echo 'style="color: #2ecc71; "';
+		<?php 
+			for($i = 1 ; $i<=12;$i++){
+				echo '<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" >
+			<a href="javascript:void(0)" class="text-center"';
+					if(isset($_COOKIE['ban'.$i.''])) echo 'style="color: #2ecc71; "';
 
 
-				 ?> onclick="startup(id);" id="1">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 1
+			echo' onclick="startup(id);" id="'.$i.'">
+				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn '.$i.'
 			</a>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" >
-			<a href="javascript:void(0)" class="text-center"  <?php
-					if(isset($_COOKIE['ban2'])) echo 'style="color: #2ecc71; "';
+		</div>';
 
+			}
 
-				 ?> onclick="startup(id);" id="2">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 2
-			</a>
-		</div>
-
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" >
-			<a href="javascript:void(0)" class="text-center"  <?php
-					if(isset($_COOKIE['ban3'])) echo 'style="color: #2ecc71; "';
-
-
-				 ?> onclick="startup(id);" id="3">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 3
-			</a>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" >
-			<a href="javascript:void(0)" class="text-center" <?php
-					if(isset($_COOKIE['ban4'])) echo 'style="color: #2ecc71; "';
-
-
-				 ?> onclick="startup(id);" id="4">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 4
-			</a>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-			<a href="javascript:void(0)" class="text-center" <?php
-					if(isset($_COOKIE['ban5'])) echo 'style="color: #2ecc71; "';
-
-
-				 ?> onclick="startup(id);" id="5">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 5
-			</a>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" >
-			<a href="javascript:void(0)" class="text-center" <?php
-					if(isset($_COOKIE['ban6'])) echo 'style="color: #2ecc71; "';
-
-
-				 ?> onclick="startup(id);" id="6">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 6
-			</a>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-			<a href="javascript:void(0)" class="text-center" <?php
-					if(isset($_COOKIE['ban7'])) echo 'style="color: #2ecc71; "';
-
-
-				 ?> onclick="startup(id);" id="7">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 7
-			</a>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-			<a href="javascript:void(0)" class="text-center"  <?php
-					if(isset($_COOKIE['ban8'])) echo 'style="color: #2ecc71; "';
-
-
-				 ?> onclick="startup(id);" id="8">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 8
-			</a>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" >
-			<a href="javascript:void(0)" class="text-center" <?php
-					if(isset($_COOKIE['ban9'])) echo 'style="color: #2ecc71;"';
-
-
-				 ?> onclick="startup(id);" id="9">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 9
-			</a>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-			<a href="javascript:void(0)" class="text-center"  <?php
-					if(isset($_COOKIE['ban10'])) echo 'style="color: #2ecc71; "';
-
-
-				 ?> onclick="startup(id);" id="10">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 10
-			</a>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" >
-			<a href="javascript:void(0)" class="text-center"  <?php
-					if(isset($_COOKIE['ban11'])) echo 'style="color: #2ecc71; "';
-
-
-				 ?>  onclick="startup(id);" id="11">
-				<h3 class="glyphicon glyphicon-glass" ></h3><br/>Bàn 11
-			</a>
-		</div>
+		 ?>
+		
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				Do con cax !!
+				Ý tưởng mới đi  ,
 
 	</div>
 </div>
@@ -130,7 +46,14 @@
 						 <img align="left" class="em-image-lg" src="https://www.iotforall.com/wp-content/uploads/2017/08/background-Newsletter-Signup.png" alt="Profile image example"/>
 						 <img align="left" class="em-image-profile thumbnail" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" alt="Profile image example"/>
 						 <div class="em-profile-text">
-								 <h3>Admin</h3>
+								 <h4><?php 
+									if(isset($_SESSION['realname'])){
+										echo $_SESSION['realname'];
+									}else {
+										echo "Admin";
+									}
+
+							 ?></h4>
 						 </div>
 				 </div>
 				<div class="infomation">
@@ -183,8 +106,6 @@
 								</span>
 							</div>
 						</li>
-
-
 					 </ul>
 				</div>
 				<div class="infomation mt-15">

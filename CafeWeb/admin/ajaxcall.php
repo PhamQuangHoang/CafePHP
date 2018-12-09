@@ -86,6 +86,9 @@ if(isset($_POST['action'])){
     $action = $_POST['action'];
     $newbat =$_POST['newbat'];
     $oldbat =$_POST['oldbat'];
+    if($newbat == $oldbat){
+      die("Không thể thực hiện trên cùng 1 bàn ");
+    }
     if($action =="Chuyển bàn"){
       $data = unserialize($_COOKIE[$oldbat]);
       setcookie($newbat, serialize($data), time()+86400 ,"/");

@@ -22,7 +22,15 @@ $sql = "SELECT * FROM `pagecontent` WHERE 1";
  ?>
 
 
-   
+   <script type="text/javascript">
+       $(document).ready(function () {
+    // Handler for .ready() called.
+    $('html, body').animate({
+        scrollTop: $('#Carousel1').offset().top
+    }, 1500);
+});
+
+   </script>
         <!--Slider-->
         <div id="Carousel1" class="carousel slide mt-30 mb-60" data-ride="carousel">
             <!-- Wrapper for slides -->

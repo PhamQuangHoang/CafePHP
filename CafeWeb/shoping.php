@@ -174,7 +174,31 @@ else {
   
   //   exit();  
   // }
+  if(isset($_POST['search'])){
+    include_once("config.php");
+    $con = new Connect('cafepage');
+    $search = $_POST['search_Text'];
+     $sql = "SELECT * FROM `listproduct` WHERE productName LIKE CONCAT('%', CONVERT('$search', BINARY), '%') OR productType LIKE CONCAT('%', CONVERT('$search', BINARY), '%') OR productName LIKE CONCAT('%', CONVERT('$search', BINARY), '%') LIMIT 3";
+         $row = $con->select($sql);
+            if($row!=0){
 
+              echo '<tr><h4>Kết quả</h4></tr>';
+                for($i = 0 ;$i<sizeof($row);$i++){
+                    echo'   
+                                            <tr>
+                                                   <td><img src="images/About/'.$row[$i]['productImage'].'.png" width="70" height="70"   id="'.$row[$i]['productID'].'_img" alt="2"> </td>
+                                                   <td>  <span class="tag-info tag-name" id="'.$row[$i]['productID'].'_name" >'.$row[$i]['productName'].'</span></td>
+                                                   <td onclick="showorder('.$row[$i]['productID'].');" ><span class="tag-info tag-name">Đặt hàng</span>  </td>
+                                               </tr> 
+                               
+                    ';
+
+                }
+              
+
+
+           }
+  }
 
   
 

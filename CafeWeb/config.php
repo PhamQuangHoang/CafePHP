@@ -30,8 +30,7 @@ class Connect{
 	public function select($sql){
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
-			  	
-					while($row = $result->fetch_assoc()){
+			   while($row = $result->fetch_assoc()){
 					     $return[] = $row;
 					}
 					return $return;
@@ -46,13 +45,13 @@ class Connect{
 
             // Encrypt cookie
       public  function encryptCookie( $value ) {
-         $key = 'hjhj';
+         $key = 'private';
          $newvalue = base64_encode( mcrypt_encrypt( MCRYPT_RIJNDAEL_256, md5( $key ), $value, MCRYPT_MODE_CBC, md5( md5( $key ) ) ) );
          return( $newvalue );
         }
         //encrypt cookie
    	public function decryptcookie($val){
-         $key = 'hjhj';
+         $key = 'private';
          $newvalue = rtrim( mcrypt_decrypt( MCRYPT_RIJNDAEL_256, md5( $key ), base64_decode( $val), MCRYPT_MODE_CBC, md5( md5( $key ) ) ), "\0");
          return( $newvalue );
    		 }

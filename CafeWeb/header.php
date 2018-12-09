@@ -31,22 +31,16 @@ $_SESSION['url']=$path;
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
          <script type="text/javascript" src="js/instafeed.min.js"></script>
         <script src="js/custom.js" type="text/javascript"></script>
-
+<script type="text/javascript" src="js/shopingcart.js"></script>
     <script type="text/javascript">
-
-        function off() {
-                $('#showorder').addClass('hidden');
-             // $("#mycart").fadeOut();
-      $('#overlay-body').css("display","none");
-}
-function on(){
-     $('#overlay-body').css("display","block");
-}
+       
     </script>
     </head>
     <body>
         <!-- overlay-* -->
         <div id="overlay-body" onclick="off();"></div>
+        <div id="overlay-body2" onclick="off2();"></div>
+
         <!--header--->
         <header>
             <div class="top-header">
@@ -81,13 +75,18 @@ function on(){
                                 <a href="home.html"><img src="images/Home/logo.png"></a>
                             </div>
                         </div>
+                        <?php 
+                           
+
+
+                         ?>
                         <div class="col-md-4 text-right col-sm-3 col-xs-4 mt_20">
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <a class="search" id="searchtoggl"><i class="fa fa-search"></i></a>
                                 <div id="searchbar" class="clearfix">
-                                    <form id="searchform">
+                                    <form type="post" action="shoping.php" onsubmit="return search();">
                                         <button type="submit" id="searchsubmit" class="fa fa-search fa-lg"></button>
-                                        <input type="search" name="search-icon" class="placeholder-fix" id="search-icon" placeholder="Keywords..." autocomplete="off">
+                                        <input type="search" name="search-icon" class="placeholder-fix" id="search-icon" placeholder="Tìm thức ăn ..." autocomplete="off">
                                     </form>
                                 </div>
                             </div>
@@ -100,8 +99,15 @@ function on(){
 
                         </div>
                     </div>
-
                 </div>
+                                 <table  class="search_result " >
+                                            
+                                           <tbody id="result_div">
+                                                
+                                              
+ 
+                                           </tbody>
+                                       </table>
             </div>
             <div class="bottom-header">
                 <nav class="navbar navbar-default">

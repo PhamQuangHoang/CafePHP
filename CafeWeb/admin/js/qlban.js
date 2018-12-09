@@ -38,8 +38,7 @@ function startup(id) {
         $("#databody").html(obj.table);
         $('#totalbill').html(obj.bill);
         $('#note').html(myck);
-        alert(response);
-
+       
       }
 
     }
@@ -99,9 +98,11 @@ function removedt() {
       $('#joindate').html(" ");
       $('#leftdate').html(" ");
       $('#databody').html(" ");
+      $('#note').html(" ");
       $('#totalbill').html(0);
       $('table tbody tr td .task input:checkbox').prop('checked', false);
       $('#' + banc).css("color", "#0060B6");
+
       alert(response);
     }
   });
@@ -163,28 +164,7 @@ $(document).ready(function() {
   $(document).on('click', '#huymon', function() {
     $("#" + tbid).remove();
     $('#editqty').val(" 	");
-    var ban = $('#ban').html();
-    var joindate = $('#joindate').html();
-    var tabledata = $('#databody').html();
-    var bill = 0;
-    $('#ordertab tbody tr').each(function() {
-
-      bill += +$('td', this).eq(4).text(); //+ will convert string to number
-    });
-    $('#totalbill').html(bill);
-    $.ajax({
-      type: 'post',
-      url: "ajaxcall.php",
-      data: {
-        datatable: tabledata,
-        ban: ban,
-        joindate: joindate
-
-      },
-      success: function(response) {
-
-      }
-    });
+    sendupdate();
   });
 
   // Tang giam so luong /// flus or sub caculator
@@ -216,40 +196,36 @@ $(document).ready(function() {
     prqty *= newVal;
     total += prqty;
     $("#" + tbid + " td").eq(4).html(total);
-
-    var bill = 0;
-    $('#ordertab tbody tr').each(function() {
-      bill += +$('td', this).eq(4).text(); //+ will convert string to number
-    });
-    $('#totalbill').html(bill);
-
-
-    var ban = $('#ban').html();
-    var joindate = $('#joindate').html();
-    var tabledata = $('#databody').html();
-    $.ajax({
-      type: 'post',
-      url: "ajaxcall.php",
-      data: {
-        datatable: tabledata,
-        ban: ban,
-        joindate: joindate
-
-      },
-      success: function(response) {
-
-      }
-    });
-
-
-
-
-
+    sendupdate();
 
   });
 
 
+  function sendupdate(){
 
+       var ban = $('#ban').html();
+        var joindate = $('#joindate').html();
+        var tabledata = $('#databody').html();
+        var bill = 0;
+        $('#ordertab tbody tr').each(function() {
+
+          bill += +$('td', this).eq(4).text(); //+ will convert string to number
+        });
+        $('#totalbill').html(bill);
+        $.ajax({
+          type: 'post',
+          url: "ajaxcall.php",
+          data: {
+            datatable: tabledata,
+            ban: ban,
+            joindate: joindate
+
+          },
+          success: function(response) {
+
+          }
+        });
+  }
   // uncheck data menu
   function removeCheckedResult($child) {
     $child.remove();

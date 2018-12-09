@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +15,9 @@
 <script type="text/javascript">
 	// dynamictab
 	$(document).ready(function() {
+		 $("#login").click(function(e) {
+	       	window.location.href = 'Account/login.php';
+	    });
 	    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
 	        e.preventDefault();
 	        $(this).siblings('a.active').removeClass("active");
@@ -77,19 +81,26 @@
 						</li>
 
 						<li>
-							<a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="#nav-collapse" aria-expanded="false" aria-controls="nav-collapse">Profile <i class=""></i> </a>
+							<a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="#nav-collapse" aria-expanded="false" aria-controls="nav-collapse"><?php 
+									if(isset($_SESSION['realname'])){
+										echo $_SESSION['realname'] ;
+									}else {
+										echo '<span id="login">Đăng nhập</span>' ;
+									}
+
+							 ?> <i class=""></i> </a>
 						</li>
 					</ul>
-					<ul class="collapse nav navbar-nav nav-collapse slide-down" role="profile" id="nav-collapse">
+					<ul class="collapse nav navbar-nav nav-collapse slide-down " role="profile" id="nav-collapse" >
 						<li><a href="#">Support</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="" width="20" />Maridlcrmn<span class="caret"></span></a>
 							<ul class="dropdown-menu text-light-bg-dark">
 								<li><a href="#">My profile</a></li>
 								<li><a href="#">Permission</a></li>
-								<li><a href="#">Settings</a></li>
+								<li><a href="#">Settings</a></li>	
 								<li class="divider"></li>
-								<li><a href="#">Logout</a></li>
+								<li><a href="Account/signout.php">Logout</a></li>
 							</ul>
 						</li>
 					</ul>

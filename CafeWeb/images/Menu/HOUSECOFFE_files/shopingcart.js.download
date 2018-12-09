@@ -26,7 +26,6 @@
       $('.proprice').html(price);
       $(".proimg").attr("src",img);
       $('#showorder').removeClass('hidden');
-      $('#result_div').html(" ");
       on();
 }
  
@@ -102,37 +101,5 @@
           });
 
 });
-      function off() {
-                $('#showorder').addClass('hidden');
-             // $("#mycart").fadeOut();
-      $('#overlay-body').css("display","none");
-}
-        function off2() {
-    $('.search_result').html(' <tbody id="result_div"></tbody>');
-      $('#overlay-body2').css("display","none");
-}
-function on(){
-     $('#overlay-body').css("display","block");
-}
-
-    function search(){
-        var searchText = $('#search-icon').val();
-        $.ajax({
-              type:'post',
-              url:'shoping.php',
-              data:{
-               search:"search",
-               search_Text:searchText
-              },
-              success:function(response) 
-              {
-               document.getElementById("result_div").innerHTML=response;
-               $('#overlay-body2').css("display","block");
-              }
-             });
- 
- return false;
-
-    }
 
 

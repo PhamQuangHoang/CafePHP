@@ -4,7 +4,45 @@ Author Name: ThemeVault
 Author URI: http://www.themevault.net/
 License URI: http://www.themevault.net/license*/
 
+.search_result {
+  position: absolute;
+z-index: 14;
+ background: #c8d6e5;
+ right: 98px;
+ margin-top: 20px;
 
+
+  
+}
+.search_result tr  {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #333;
+  
+  
+}
+.search_result tr td:nth-child(3){
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+ 
+ 
+}.search_result tr td:nth-child(3):hover{
+  background-color: #01a3a4;
+ 
+
+}
+#overlay-body2 {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    
+}
 #overlay-body {
     position: fixed;
     display: none;
@@ -15,7 +53,7 @@ License URI: http://www.themevault.net/license*/
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
-    z-index: 2;
+    z-index: 15!important;
     cursor: pointer;
 }
 /* payment-start */
@@ -290,7 +328,6 @@ span.round-tab:hover {
     width: 290px;
     position: relative;
     border: 3px solid #a29bfe;
-    z-index: 9!important;
     background: white;
     box-shadow: 0 0 10px #333;
 }
@@ -1221,7 +1258,7 @@ a #searchtoggl {
     position: absolute;
     top: 40px;
     width: 180px;
-    z-index: 9999;
+    z-index: 8;
     border: 1px solid #000;
     background: #fff none repeat scroll 0 0;
     display: none;
@@ -1359,9 +1396,9 @@ a #searchtoggl {
 
 @media only screen and (max-width: 768px) {
 
-        .bottom-header {
-              z-index: 15 !important;
-        }
+       .search_result{
+        right: 5%;
+       }
         .details-header {
             width: 350px;
             height: auto;
